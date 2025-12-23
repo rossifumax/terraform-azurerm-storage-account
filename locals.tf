@@ -10,5 +10,5 @@ locals {
     && !(var.nfsv3_enabled || var.sftp_enabled || var.account_tier == "Premium")
   )
 
-  security_storage_plan = try(data.azapi_resource.security_storage.output.properties.subPlan, "")
+  security_storage_plan = "" #try(data.azapi_resource.security_storage.output.properties.subPlan, "")
 }
